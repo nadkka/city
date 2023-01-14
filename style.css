@@ -1,0 +1,12 @@
+#rowniezbok{
+    height: 1500px;
+    width: 400px;
+    float: right;
+    background-color: lightcoral;
+    padding: 1%;
+}
+
+#bok{
+    float: left;
+    width: 75%;
+}
