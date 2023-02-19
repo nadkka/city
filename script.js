@@ -1,309 +1,142 @@
 document.onselectstart = function(){return false;};
+window.addEventListener("contextmenu", e => e.preventDefault());
 
-function piekarnia1(){
-    document.getElementById('bok').innerHTML+='<img src="bakery.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+var zmienna=0
+var aa=0
+var dziala=4
 
-function piekarnia2(){
-    document.getElementById('bok').innerHTML+='<img src="bakery2.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+document.addEventListener("dragend", function(event) {
 
-function bank1(){
-    document.getElementById('bok').innerHTML+='<img src="bank.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  zmienna+=1
 
-function bank2(){
-    document.getElementById('bok').innerHTML+='<img src="bank2.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  if(event.target.id=="wm"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="60"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
+  else if(event.target.id=="wm6"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="300"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function kosciol1(){
-    document.getElementById('bok').innerHTML+='<img src="church.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="wm3" || event.target.id=="wm5" || event.target.id=="szpital3"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="200"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
+  
+  else if(event.target.id=="crossing3" || event.target.id=="crossing5"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="187"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function kosciol2(){
-    document.getElementById('bok').innerHTML+='<img src="church2.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="crossing2" || event.target.id=="crossing4"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="140"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
+  
+  else if(event.target.id=="crossing"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="135"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function cyrk1(){
-    document.getElementById('bok').innerHTML+='<img src="wm.png" class="moving" height="60"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="crosswalk"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="26.5"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function cyrk2(){
-    document.getElementById('bok').innerHTML+='<img src="wm2.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if( event.target.id=="crosswalk2"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="47"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function cyrk3(){
-    document.getElementById('bok').innerHTML+='<img src="wm3.png" class="moving" height="200"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="skret" || event.target.id=="skret2" || event.target.id=="skret3" || event.target.id=="skret4"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="105"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function cyrk4(){
-    document.getElementById('bok').innerHTML+='<img src="wm4.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="roundabout" ||  event.target.id=="centr" ||  event.target.id=="centr2" ||  event.target.id=="szpital" ||  event.target.id=="szpital2"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="160"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function cyrk5(){
-    document.getElementById('bok').innerHTML+='<img src="wm5.png" class="moving" height="200"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="mechanic"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="130"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function cyrk6(){
-    document.getElementById('bok').innerHTML+='<img src="wm6.png" class="moving" height="300"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="bank" || event.target.id=="bank2" || event.target.id=="church" || event.target.id=="church2" || event.target.id=="school" || event.target.id=="school2" || event.target.id=="straz" || event.target.id=="straz2"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="150"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function school1(){
-    document.getElementById('bok').innerHTML+='<img src="school.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else if(event.target.id=="droga"){
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="50"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function school2(){
-    document.getElementById('bok').innerHTML+='<img src="school2.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
+  else{
+    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" alt="'+event.target.id +'" id="'+ zmienna +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="100"></img></div>';
+    document.getElementById("d"+zmienna).style.height="0.5px";
+    document.getElementById("d"+zmienna).style.width="0.5px";
+  }
 
-function straz1(){
-    document.getElementById('bok').innerHTML+='<img src="straz.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function straz2(){
-    document.getElementById('bok').innerHTML+='<img src="straz2.png" class="moving" height="150"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom1(){
-    document.getElementById('bok').innerHTML+='<img src="dom.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom2(){
-    document.getElementById('bok').innerHTML+='<img src="dom2.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom3(){
-    document.getElementById('bok').innerHTML+='<img src="dom3.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom4(){
-    document.getElementById('bok').innerHTML+='<img src="dom4.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom5(){
-    document.getElementById('bok').innerHTML+='<img src="dom5.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom6(){
-    document.getElementById('bok').innerHTML+='<img src="dom6.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom7(){
-    document.getElementById('bok').innerHTML+='<img src="dom7.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom8(){
-    document.getElementById('bok').innerHTML+='<img src="dom8.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function dom9(){
-    document.getElementById('bok').innerHTML+='<img src="dom9.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function szpital1(){
-    document.getElementById('bok').innerHTML+='<img src="szpital.png" class="moving" height="160"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function szpital2(){
-    document.getElementById('bok').innerHTML+='<img src="szpital2.png" class="moving" height="160"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function szpital3(){
-    document.getElementById('bok').innerHTML+='<img src="szpital3.png" class="moving" height="200"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function ch1(){
-    document.getElementById('bok').innerHTML+='<img src="centr.png" class="moving" height="160"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function ch2(){
-    document.getElementById('bok').innerHTML+='<img src="centr2.png" class="moving" height="160"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function mechanik1(){
-    document.getElementById('bok').innerHTML+='<img src="mechanic.png" class="moving" height="130"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function park1(){
-    document.getElementById('bok').innerHTML+='<img src="park.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function park2(){
-    document.getElementById('bok').innerHTML+='<img src="park2.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function parking1(){
-    document.getElementById('bok').innerHTML+='<img src="spaces.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function droga1(){
-    document.getElementById('bok').innerHTML+='<img src="droga.png" class="moving" width="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function droga2(){
-    document.getElementById('bok').innerHTML+='<img src="droga2.png" class="moving" height="100"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function zakret1(){
-    document.getElementById('bok').innerHTML+='<img src="skret.png" class="moving" height="105"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function zakret2(){
-    document.getElementById('bok').innerHTML+='<img src="skret2.png" class="moving" height="105"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function zakret3(){
-    document.getElementById('bok').innerHTML+='<img src="skret3.png" class="moving" height="105"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function zakret4(){
-    document.getElementById('bok').innerHTML+='<img src="skret4.png" class="moving" height="105"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function pdp1(){
-    document.getElementById('bok').innerHTML+='<img src="crosswalk.png" class="moving" width="50"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
-}
-
-function pdp2(){
-  document.getElementById('bok').innerHTML+='<img src="crosswalk2.png" class="moving" height="50"></img>';
   $( function() {     
-      $( ".moving" ).draggable();
-    });
+    $( ".moving" ).draggable();
+  });
+});
+
+function menu(id, element, height){
+    document.getElementById("d"+id).innerHTML= '<img src="'+ element +'.png" alt="'+element +'" id="'+ id +'" oncontextmenu="menu(this.id,this.alt,this.height)" draggable="false" height="'+ height+'"></img> <div id="divek"><button onclick="usun('+ id +')">✖</button> <button onclick="flip()">↔</button> <button onclick="prawo('+ id +')">↺</button> <button>↻</button> <button>-</button> <button>+</button></div>';
+    if(dziala%4==1){
+      document.getElementById(id).style.transform = 'rotate(-90deg)';
+    }
+    if(dziala%4==2){
+      document.getElementById(id).style.transform = 'rotate(180deg)';
+    }
+    if(dziala%4==3){
+      document.getElementById(id).style.transform = 'rotate(90deg)';
+    }
+    setTimeout(() => {
+      document.getElementById("divek").remove()
+  }, 2000);  
 }
 
-function rondo1(){
-    document.getElementById('bok').innerHTML+='<img src="roundabout.png" class="moving" height="160"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
+function usun(idd){
+  document.getElementById("d"+ idd).remove();
 }
 
-function skrzyz1(){
-    document.getElementById('bok').innerHTML+='<img src="crossing.png" class="moving" height="135"></img>';
-    $( function() {     
-        $( ".moving" ).draggable();
-      });
+function flip(iddd){
+  // if(dziala%2==0){
+  //   document.getElementById(iddd).style.transform=" scaleX(-1)";
+  // }
+  // else{
+  //   document.getElementById(iddd).style.transform=" scaleX(1)";
+  // }
+  // dziala+=1
+}
+
+function prawo(di){
+  if(dziala%4==1){
+    document.getElementById(di).style.transform = 'rotate(-90deg)';
+  }
+  if(dziala%4==2){
+    document.getElementById(di).style.transform = 'rotate(180deg)';
+  }
+  if(dziala%4==3){
+    document.getElementById(di).style.transform = 'rotate(90deg)';
+  }
+  
+  dziala+=1
 }
