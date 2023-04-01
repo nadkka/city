@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIASTO</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="rowniezbok">
+        <aside id="panel">
+        
+            PIEKARNIA <img onclick="instrukcja()" src="znakzap.png" style="cursor: pointer" id="info" alt=""><br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="bakery.png" id="bakery" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="bakery2.png" id="bakery2" class="ruchome" draggable="true"> <br> <br>
+            SKLEP <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="sklep.png" id="sklep" class="ruchome" draggable="true"><img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="sklep2.png" id="sklep2" class="ruchome" draggable="true"> <br> <br>
+            RESTAURACJA <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="restaurant.png" id="restaurant" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="restaurant2.png" id="restaurant2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="restaurant3.png" id="restaurant3" class="ruchome" draggable="true"> <br> <br>
+            LOTNISKO <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="airport.png" id="airport" class="ruchome" draggable="true"> <img  src="airport2.png" height="30" style="cursor: pointer" onclick="dodanie(this.id)" id="airport2" class="ruchome" draggable="true"> <br> <br>
+            BANK <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="bank.png" id="bank" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="bank2.png" id="bank2" class="ruchome" draggable="true"> <br> <br>
+            KOŚCIÓŁ <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="church.png" id="church" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="church2.png" id="church2" class="ruchome" draggable="true"> <br> <br>
+            CYRK <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="wm.png" id="wm" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="wm2.png" id="wm2" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="wm3.png" id="wm3" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="wm4.png" id="wm4" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="wm5.png" id="wm5" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="wm6.png" id="wm6" class="ruchome" draggable="true"> <br> <br>
+            SZKOŁA <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="school.png" id="school" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="school2.png" id="school2" class="ruchome" draggable="true"> <br> <br>
+            STRAŻ POŻARNA <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="straz.png" id="straz" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="straz2.png" id="straz2" class="ruchome" draggable="true"> <br> <br>
+            WIEŻOWIEC <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="wiez.png" id="wiez" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="wiez2.png" id="wiez2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="wiez3.png" id="wiez3" class="ruchome" draggable="true"> <br> <br>
+            DOM <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dom.png" id="dom" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dom2.png" id="dom2" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="dom3.png" id="dom3" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dom4.png" id="dom4" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="dom5.png" id="dom5" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="dom6.png" id="dom6" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="dom7.png" id="dom7" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dom8.png" id="dom8" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dom9.png" id="dom9" class="ruchome" draggable="true"><br> <br>
+            RATUSZ <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="ratusz.png" id="ratusz" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="ratusz2.png" id="ratusz2" class="ruchome" draggable="true"> <br> <br>
+            SZPITAL <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="szpital.png" id="szpital" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="szpital2.png" id="szpital2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)"src="szpital3.png" id="szpital3" class="ruchome" draggable="true"> <br> <br>
+            CENTRUM HANDLOWE <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="centr.png" id="centr" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="centr2.png" id="centr2" class="ruchome" draggable="true"> <br> <br>
+            MECHANIK <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="mechanic.png" id="mechanic" class="ruchome" draggable="true"> <br> <br>
+            PARK <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="park.png" id="park" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="park2.png" id="park2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="fontanna.png" id="fontanna" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="fontanna2.png" id="fontanna2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="drzewo.png" id="drzewo" class="ruchome" draggable="true"><img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="drzewo1.png" id="drzewo1" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="drzewo2.png" id="drzewo2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="drzewo3.png" id="drzewo3" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="lake.png" id="lake" class="ruchome" draggable="true"> <img height="30" width="40" style="cursor: pointer" onclick="dodanie(this.id)" src="plot.png" id="plot" class="ruchome" draggable="true"> <br> <br>
+            ZWIERZĘTA <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dog.png" id="dog" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dog2.png" id="dog2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="dog3.png" id="dog3" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="cat.png" id="cat" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="cat2.png" id="cat2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="cat3.png" id="cat3" class="ruchome" draggable="true">  <br><br>
+            PARKING <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="spaces.png" id="spaces" class="ruchome" draggable="true"> <br> <br>
+            DROGA <br>
+            <img width="30" style="cursor: pointer" onclick="dodanie(this.id)" src="droga.png" id="droga" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="droga2.png" id="droga2" class="ruchome" draggable="true"> <br> <br>
+            ZAKRĘT <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="skret.png" id="skret" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="skret2.png" id="skret2" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="skret3.png" id="skret3" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="skret4.png" id="skret4" class="ruchome" draggable="true"> <br> <br>
+            PRZEJŚCIE DLA PIESZYCH <br>
+            <img width="30" style="cursor: pointer" onclick="dodanie(this.id)" src="crosswalk.png" id="crosswalk" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="crosswalk2.png" id="crosswalk2" class="ruchome" draggable="true"><br> <br>
+            RONDO <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="roundabout.png" id="roundabout" class="ruchome" draggable="true"> <br> <br>
+            SKRZYŻOWANIE <br>
+            <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="crossing.png" id="crossing" class="ruchome" draggable="true"> <img height="30" style="cursor: pointer" onclick="dodanie(this.id)" src="crossing2.png" id="crossing2" class="ruchome" draggable="true"> <img width="30" style="cursor: pointer" onclick="dodanie(this.id)" src="crossing3.png" id="crossing3" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" height="30" style="cursor: pointer" src="crossing4.png" id="crossing4" class="ruchome" draggable="true"> <img onclick="dodanie(this.id)" width="30" style="cursor: pointer" src="crossing5.png" id="crossing5" class="ruchome" draggable="true"><br> <br>
+        </aside>
+    </div>
+
+    <aside id="bok">
+
+    </aside>
+
+    <div id="informacje">
+    <div id="info2"> 
+        <div id="iks" onclick="wylacz()" style="cursor: pointer">✖</div>
+        <div id="de">
+            Witaj w kreatorze miasta! Wybuduj swoją wymarzoną metropolię! <br> <br>
+
+            Aby dodać element na mapę miasta kliknij albo przeciągnij go z panelu po prawej stronie. <br>
+            Po kliknięciu prawym przyciskiem na element, pokaże się menu z kilkoma funkcjami. <br> <br>
+            MIŁEGO BUDOWANIA!
+        </div>
+ 
+    </div>
+    </div>
+</body>
+</html>
