@@ -1,4 +1,4 @@
-﻿document.onselectstart = function(){return false;};
+document.onselectstart = function(){return false;};
 window.addEventListener("contextmenu", e => e.preventDefault());
 
 var x=0
@@ -7,108 +7,7 @@ var zmienna=0
 
 document.addEventListener("dragend", function(event) {
 
-  zmienna+=1
-
-  if(event.target.id=="wm"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="60"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-  else if(event.target.id=="wm6" || event.target.id=="wiez" || event.target.id=="wiez2" || event.target.id=="wiez3"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="300"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="wm3" || event.target.id=="wm5" || event.target.id=="szpital3"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="200"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-  
-  else if(event.target.id=="crossing3" || event.target.id=="crossing5"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="187"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="crossing2" || event.target.id=="crossing4"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="140"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-  
-  else if(event.target.id=="crossing"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="135"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="crosswalk"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="26.5"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if( event.target.id=="crosswalk2" || event.target.id=="dog" || event.target.id=="dog2" || event.target.id=="dog3" || event.target.id=="cat" || event.target.id=="cat2" || event.target.id=="cat3" || event.target.id=="plot"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="47"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="skret" || event.target.id=="skret2" || event.target.id=="skret3" || event.target.id=="skret4"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="105"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="roundabout" ||  event.target.id=="centr" ||  event.target.id=="centr2" ||  event.target.id=="szpital" ||  event.target.id=="szpital2" ||  event.target.id=="airport" ||  event.target.id=="airport2" ||  event.target.id=="ratusz" ||  event.target.id=="ratuszs2"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="160"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="mechanic"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="130"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="bank" || event.target.id=="bank2" || event.target.id=="church" || event.target.id=="church2" || event.target.id=="school" || event.target.id=="school2" || event.target.id=="straz" || event.target.id=="straz2" || event.target.id=="lake"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="150"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else if(event.target.id=="droga"){
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="50"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  else{
-    document.getElementById('bok').innerHTML+='<div id="d'+ zmienna +'" class="moving"><img src="'+ event.target.id +'.png" id="'+ zmienna +'" oncontextmenu="menu(this.id)" draggable="false" height="100"></img></div>';
-    document.getElementById("d"+zmienna).style.height="0.0001px";
-    document.getElementById("d"+zmienna).style.width="0.0001px";
-    document.getElementById(zmienna).alt="0";
-  }
-
-  $( function() {     
-    $( ".moving" ).draggable();
-  });
+  dodanie(event.target.id)  
   
 });
 
