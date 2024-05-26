@@ -13,6 +13,8 @@ body{
     position: relative;
     border: 5px solid black;
     display: block;
+    overflow: auto;
+    height: 93vh;
 
 }
 
